@@ -46,53 +46,53 @@ git clone git://github.com/msanders/snipmate.vim.git bundle/snipmate >/dev/null 
 
 # install surround, most exciting plugin for vim ever :-D
 echo "Installing surround..."
-git://github.com/tpope/vim-surround.git bundle/surround
+git clone git://github.com/tpope/vim-surround.git bundle/surround >/dev/null 2>&1
 
 # install additional color schemes
 echo "Installing colorsamplerpack..."
 echo "Check out http://www.vi-improved.org/color_sampler_pack/ to see all schemes"
-git://github.com/vim-scripts/Color-Sampler-Pack.git bundle/colorsamplerpack
+git clone git://github.com/vim-scripts/Color-Sampler-Pack.git bundle/colorsamplerpack >/dev/null 2>&1
 
 echo "Installing solarized..."
-git://github.com/altercation/vim-colors-solarized.git bundle/solarized
+git clone git://github.com/altercation/vim-colors-solarized.git bundle/solarized >/dev/null 2>&1
 
 # install all other important addons
 echo "Installing nerdtree..."
-git://github.com/scrooloose/nerdtree.git bundle/nerdtree
+git clone git://github.com/scrooloose/nerdtree.git bundle/nerdtree >/dev/null 2>&1
 echo "Installing command-t..."
 # simpler repository
-git://github.com/vim-scripts/Command-T.git bundle/command-t
+git clone git://github.com/vim-scripts/Command-T.git bundle/command-t >/dev/null 2>&1
 echo "Installing nerdcommenter..."
-git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter
+git clone git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter >/dev/null 2>&1
 echo "Installing tasklist..."
-git://github.com/vim-scripts/TaskList.vim.git bundle/tasklist
+git clone git://github.com/vim-scripts/TaskList.vim.git bundle/tasklist >/dev/null 2>&1
 echo "Installing taglist..."
 echo "NOTE: you need to install ctags in order to use taglist"
-git://github.com/vim-scripts/taglist.vim.git bundle/taglist
+git clone git://github.com/vim-scripts/taglist.vim.git bundle/taglist >/dev/null 2>&1
 echo "Installing gundo..."
-git://github.com/sjl/gundo.vim.git bundle/gundo
+git clone git://github.com/sjl/gundo.vim.git bundle/gundo >/dev/null 2>&1
 echo "Installing pyflakes..."
-git://github.com/kevinw/pyflakes-vim.git bundle/pyflakes-vim
+git clone git://github.com/kevinw/pyflakes-vim.git bundle/pyflakes-vim >/dev/null 2>&1
 echo "Installing Rope..."
 # TODO: in future, take a look at https://github.com/klen/python-mode
-git://github.com/klen/rope-vim.git bundle/ropevim
+git clone git://github.com/klen/rope-vim.git bundle/ropevim >/dev/null 2>&1
 echo "Installing pydoc..."
-git://github.com/fs111/pydoc.vim.git bundle/pydoc
+git clone git://github.com/fs111/pydoc.vim.git bundle/pydoc >/dev/null 2>&1
 echo "Installing pytest.vim..."
-git://github.com/alfredodeza/pytest.vim.git bundle/pytest
+git clone git://github.com/alfredodeza/pytest.vim.git bundle/pytest >/dev/null 2>&1
 echo "Installing pep8..."
-git://github.com/jcrocholl/pep8.git bundle/pep8
+git clone git://github.com/jcrocholl/pep8.git bundle/pep8 >/dev/null 2>&1
 echo "Installing jinja2 support..."
-git://github.com/vim-scripts/Jinja.git bundle/jinja
+git clone git://github.com/vim-scripts/Jinja.git bundle/jinja >/dev/null 2>&1
 echo "Installing closetag..."
-git://github.com/vim-scripts/closetag.vim.git bundle/closetag
+git clone git://github.com/vim-scripts/closetag.vim.git bundle/closetag >/dev/null 2>&1
 
 # install less important addons
 echo "Installing LaTeX support..."
-git://github.com/gerw/vim-latex-suite.git bundle/latex
+git clone git://github.com/gerw/vim-latex-suite.git bundle/latex >/dev/null 2>&1
 echo "Installing ack..."
-git://github.com/vim-scripts/ack.vim.git bundle/ack
+git clone git://github.com/vim-scripts/ack.vim.git bundle/ack >/dev/null 2>&1
 echo "Installing makegreen..."
-git://github.com/reinh/vim-makegreen.git bundle/makegreen
+git clone git://github.com/reinh/vim-makegreen.git bundle/makegreen >/dev/null 2>&1
 echo "Installing nginx syntax..."
-git://github.com/vim-scripts/nginx.vim.git bundle/nginx
+git clone git://github.com/vim-scripts/nginx.vim.git bundle/nginx >/dev/null 2>&1
