@@ -1,5 +1,5 @@
 About
-~~~~~
+-----
 
 This vim settings repository contains:
 
@@ -8,7 +8,8 @@ This vim settings repository contains:
 * easy install && update scripts to handle pathogen's bundles
 
 Installation
-~~~~~~~~~~~~
+------------
+
 Clone this repository to your HOME dir, e.g.:
 
     git clone https://github.com/pbnan/Vim-dotfiles.git $HOME/vimconfig
@@ -20,7 +21,7 @@ If you are going to display functions, variables, classes, class methods and
 so on, you ougth to install `ctags` application.
 
 Updating
-~~~~~~~~
+--------
 
 First make sure you're using latest vim configs from this repository:
 
