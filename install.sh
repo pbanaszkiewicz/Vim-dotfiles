@@ -1,6 +1,7 @@
 #!/bin/bash
+# DISCLAIMER:
 # This installation script is intended not to do any harm, but the author makes
-# no warranty that it certainly won't.
+# no warranty that it certainly won't and/or perfectly fits your needs.
 
 CURR_DIR="`pwd`"
 
