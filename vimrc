@@ -158,12 +158,17 @@ ia reutrn return
 
 " ### DESIGN, APPEARANCE, SCHEMES
 syntax on
-set guifont=Monaco\ 9
+" change to your favorite
+set guifont=Inconsolata\ 10
+"set guifont=Dina\ 10
+"set guifont=MonteCarlo\ 10
 set number
 set background=dark
 colorscheme wombat
+" Try out these schemes as well (last one might be interesting)
 "colorscheme darkblue2
 "colorscheme darkerdesert
+"colorscheme solarized
 
 
 " ### LAST CURSOR POSITION
@@ -184,7 +189,6 @@ set nofoldenable        " don't fold by default
 
 
 " ### KEYBOARD MAPPING
-" TODO: watch out for 'autoclose' plugin
 " disable arrows
 noremap  <Up>    <NOP>
 noremap  <Down>  <NOP>
@@ -212,7 +216,8 @@ nnoremap <C-l> <C-w>l
 nnoremap ; :
 
 
-" ### ADDONS
+" ###############
+" ### ADDONS ####
 "     ### NERDTREE
 "     <F3> to activate
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
@@ -300,6 +305,9 @@ map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 "     simply write
 "     :Pytest <TAB>
 "     and you'll see all the possible actions
+
+"     ### PEP8
+"     \8 to test your current file against PEP8
 
 "     ### CLOSETAG
 au BufNewFile,BufRead *.html let g:closetag_html_style=1

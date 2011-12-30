@@ -72,9 +72,11 @@ git clone git://github.com/vim-scripts/taglist.vim.git bundle/taglist >/dev/null
 echo "Installing gundo..."
 git clone git://github.com/sjl/gundo.vim.git bundle/gundo >/dev/null 2>&1
 echo "Installing pyflakes..."
+echo "NOTE: you need to install pyflakes package for your Python2.x installation"
 git clone git://github.com/kevinw/pyflakes-vim.git bundle/pyflakes-vim >/dev/null 2>&1
 echo "Installing Rope..."
 # TODO: in future, take a look at https://github.com/klen/python-mode
+echo "For future reference: https://github.com/klen/python-mode"
 git clone git://github.com/klen/rope-vim.git bundle/ropevim >/dev/null 2>&1
 echo "Installing pydoc..."
 git clone git://github.com/fs111/pydoc.vim.git bundle/pydoc >/dev/null 2>&1
