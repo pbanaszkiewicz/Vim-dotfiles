@@ -15,8 +15,10 @@ Clone this repository to your HOME dir, e.g.:
     git clone https://github.com/pbnan/Vim-dotfiles.git $HOME/vimconfig
 
 Then run `install.sh` from within `$HOME/vimconfig` directory.
+
 If you are going to use Python syntax checking on-the-fly, you ougth to
 install Python package `pyflakes`:http://pypi.python.org/pypi/pyflakes
+
 If you are going to display functions, variables, classes, class methods and
 so on, you ougth to install `ctags` application.
 
