@@ -6,7 +6,7 @@
 CURR_DIR="`pwd`"
 BUNDLE_DIR="$CURR_DIR/bundle"
 
-echo "Updating all addons..."
+echo "Updating all addons:"
 
 for i in `ls $BUNDLE_DIR`
 do
