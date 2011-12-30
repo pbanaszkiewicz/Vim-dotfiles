@@ -159,16 +159,17 @@ ia reutrn return
 " ### DESIGN, APPEARANCE, SCHEMES
 syntax on
 " change to your favorite
-set guifont=Inconsolata\ 10
+set guifont=Consolas\ 11
+"set guifont=Inconsolata\ 10
 "set guifont=Dina\ 10
 "set guifont=MonteCarlo\ 10
 set number
 set background=dark
-colorscheme wombat
+"colorscheme wombat
 " Try out these schemes as well (last one might be interesting)
 "colorscheme darkblue2
 "colorscheme darkerdesert
-"colorscheme solarized
+colorscheme solarized
 
 
 " ### LAST CURSOR POSITION
@@ -319,3 +320,7 @@ au BufNewFile,BufRead *.html let g:closetag_html_style=1
 "     active by default
 au FileType python let b:delimitMate_nesting_quotes=['"']
 au FileType text,asciidoc let b:delimitMate_autoclose=0
+
+"     ### NERD COMMENTER
+"     simply \c<SPACE> to toggle comments
+"     or \cl (left) to align comment signs to the left
