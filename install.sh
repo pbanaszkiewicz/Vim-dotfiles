@@ -89,6 +89,8 @@ echo "Installing jinja2 support..."
 git clone git://github.com/vim-scripts/Jinja.git bundle/jinja >/dev/null 2>&1
 echo "Installing closetag..."
 git clone git://github.com/vim-scripts/closetag.vim.git bundle/closetag >/dev/null 2>&1
+echo "Installing delimitMate (for autoclosing brackets etc)..."
+git clone git://github.com/Raimondi/delimitMate.git bundle/delimitMate >/dev/null 2>&1
 
 # install less important addons
 echo "Installing LaTeX support..."

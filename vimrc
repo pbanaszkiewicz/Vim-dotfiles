@@ -201,11 +201,11 @@ inoremap  <Right> <NOP>
 " you'll move easier in long, wrapped lines
 nnoremap j gj
 nnoremap k gk
-" make F1 working as ESCAPE (guess it's important on laptops)
+" make F1 working as ESCAPE
 inoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 nnoremap <F1> <ESC>
-" quickly reselect pasted text
+" quickly reselect pasted text: \v
 nnoremap <leader>v V`]
 " CTRL+{h,j,k,l} for switching between windows
 nnoremap <C-h> <C-w>h
@@ -306,8 +306,16 @@ map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 "     :Pytest <TAB>
 "     and you'll see all the possible actions
 
+
 "     ### PEP8
 "     \8 to test your current file against PEP8
 
+
 "     ### CLOSETAG
 au BufNewFile,BufRead *.html let g:closetag_html_style=1
+
+
+"     ### DELIMITMATE
+"     active by default
+au FileType python let b:delimitMate_nesting_quotes=['"']
+au FileType text,asciidoc let b:delimitMate_autoclose=0
