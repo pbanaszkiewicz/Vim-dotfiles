@@ -17,10 +17,10 @@ Clone this repository to your HOME dir, e.g.:
 Then run `install.sh` from within `$HOME/vimconfig` directory.
 
 If you are going to use Python syntax checking on-the-fly, you ougth to
-install Python package `pyflakes`:http://pypi.python.org/pypi/pyflakes
+install Python package `pyflakes` (http://pypi.python.org/pypi/pyflakes)
 
 If you are going to display functions, variables, classes, class methods and
-so on, you ougth to install `ctags` application.
+so on, you ougth to install `ctags` package for your distribution.
 
 Updating
 --------
@@ -32,3 +32,9 @@ First make sure you're using latest vim configs from this repository:
 Then simply run:
 
     ./update.sh
+
+Future
+------
+
+Take a look at https://github.com/klen/python-mode which is going to replace
+pyflakes, ropevim and pylint.
