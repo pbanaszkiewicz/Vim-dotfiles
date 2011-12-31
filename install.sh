@@ -29,8 +29,23 @@ ln -s "$CURR_DIR/vimrc" "$HOME/.gvimrc"
 # make .vim link to this folder
 ln -s "$CURR_DIR" "$HOME/.vim"
 
+# make sure vim's compiled with Python support
+test_python=`vim --version | grep '+python'`
+if [[ $? -eq 1 ]]; then
+    echo "WARNING!!!"
+    echo "Your VIM is not compiled with Python support. Soon you will face some"
+    echo "real life threatening problems."
+fi;
+
+# make sure vim's compiled with Ruby support
+test_ruby=`vim --version | grep '+ruby'`
+if [[ $? -eq 1 ]]; then
+    echo "WARNING!!!"
+    echo "Your VIM is not compiled with Ruby support. Soon you may regret this."
+fi;
+
 # install additional modules etc
-echo "Installing addons to VIM"
+echo "Installing addons to VIM:"
 mkdir bundle
 
 # install pathogen
