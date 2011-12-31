@@ -137,9 +137,6 @@ set autoindent
 let python_highlight_all=1
 let python_highlight_numbers=1
 let python_highlight_exceptions=1
-" PEP8 plugin file validation
-" by default: \8
-let g:pep8_map='<leader>8'
 
 
 " ### SPELLING
@@ -159,7 +156,7 @@ ia reutrn return
 " ### DESIGN, APPEARANCE, SCHEMES
 syntax on
 " change to your favorite
-set guifont=Consolas\ 11
+set guifont=Consolas\ 10
 "set guifont=Inconsolata\ 10
 "set guifont=Dina\ 10
 "set guifont=MonteCarlo\ 10
@@ -253,32 +250,54 @@ map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
 
 
-"     ### PYFLAKES
-"     active by default
-let g:pyflakes_use_quickfix=0
+"     ### PYTHON-MODE
+"     \r to run current file in Python
+"     \b to (un)set the breakpoint
 
 
-"     ### ROPE
+"     ### PYTHON-MODE pylint / pyflakes
+"     perform check when the file is being written
+let g:pymode_lint_config="$HOME/.vim/bundle/python-mode/pylint.ini"
+" pyflakes is not as strict as pylint is
+let g:pymode_lint_checker="pyflakes"
+
+
+"     ### PYTHON-MODE rope
 "     \j   jump to definition
-"     \r   rename (simple refactoring)
-"     <C-o>  intelisense / completion
-let ropevim_vim_completion=1
-let ropevim_extended_complete=1
-let ropevim_goto_def_newwin=1     " go to definition in new buffer
+"     \n   rename (simple refactoring)
+"     <C-o>      intellisense / completion
+"     <C-Space>  intellisense / completion
 noremap <leader>j :RopeGotoDefinition<CR>
-noremap <leader>r :RopeRename<CR>
+noremap <leader>n :RopeRename<CR>
 inoremap <C-o> <C-R>=RopeCodeAssistInsertMode()<CR>
 
 
-"     ### ACK
-"     \a to activate
-nmap <leader>a <Esc>:Ack!<CR>
+"     ### PYTHON-MODE pydoc
+"     e.g.
+"     :Pydoc math
+"     press "K" when caret's on some word and pydoc will search for it
+
+
+"     ### PYTEST.VIM
+"     simply write
+"     :Pytest <TAB>
+"     and you'll see all the possible actions
+
+
+"     ### PEP8
+"     \8 to test your current file against PEP8
+let g:pep8_map='<leader>8'
 
 
 "     ### MAKEGREEN
 "     \dt to activate
 "     Django testing (default, ie. no nose-tests)
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
+
+
+"     ### ACK
+"     \a to activate
+nmap <leader>a <Esc>:Ack!<CR>
 
 
 "     ### SNIPMATE
@@ -296,29 +315,13 @@ map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 "     \t to activate
 
 
-"     ### PYDOC
-"     e.g.
-"     :Pydoc math
-"     :PydocSearch permutations
-
-
-"     ### PYTEST.VIM
-"     simply write
-"     :Pytest <TAB>
-"     and you'll see all the possible actions
-
-
-"     ### PEP8
-"     \8 to test your current file against PEP8
-
-
 "     ### CLOSETAG
 au BufNewFile,BufRead *.html let g:closetag_html_style=1
 
 
 "     ### DELIMITMATE
 "     active by default
-au FileType python let b:delimitMate_nesting_quotes=['"']
+"au FileType python let b:delimitMate_nesting_quotes=['"']
 au FileType text,asciidoc let b:delimitMate_autoclose=0
 
 "     ### NERD COMMENTER

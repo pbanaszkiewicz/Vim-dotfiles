@@ -16,13 +16,25 @@ Clone this repository anywhere, for example to your HOME dir:
 
 Then run `install.sh` from within `$HOME/vimconfig` directory.
 
-If you are going to use Python syntax checking on-the-fly, you ougth to
-install Python package `pyflakes` (http://pypi.python.org/pypi/pyflakes).
-You don't need to include pyflakes in every virtualenv you make, it's enough to
-keep it in site-packages.
-
 If you are going to display functions, variables, classes, class methods and
 so on, you ougth to install `ctags` package for your distribution.
+
+You *don't need to install* `pyflakes` package, as one is included with
+`python-mode` vim addon. This is also virtualenv-safe, so don't worry about it.
+
+After installation
+------------------
+
+Please make sure you read the whole `vimrc` file. It contains not only
+predefined by me settings, but also links to useful resources (where you can
+learn how to use for example `surround` plugin) and even more useful
+keybindings.
+
+You can change your font and/or theme as desired, too.
+
+Please note that this configuration is intended mainly to help working on
+Python files and there might exist more sufficient configurations for other
+languages.
 
 Updating
 --------
@@ -38,5 +50,4 @@ Then simply run:
 Future
 ------
 
-Take a look at https://github.com/klen/python-mode which is going to replace
-pyflakes, ropevim and pylint.
+Make managing vim scripts easier.
