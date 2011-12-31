@@ -72,32 +72,27 @@ echo "NOTE: you need to install ctags in order to use taglist"
 git clone git://github.com/vim-scripts/taglist.vim.git bundle/taglist >/dev/null 2>&1
 echo "Installing gundo..."
 git clone git://github.com/sjl/gundo.vim.git bundle/gundo >/dev/null 2>&1
-echo "Installing pyflakes..."
-echo "NOTE: you need to install pyflakes package for your Python2.x installation"
-git clone git://github.com/kevinw/pyflakes-vim.git bundle/pyflakes-vim >/dev/null 2>&1
-echo "Installing Rope..."
-# TODO: in future, take a look at https://github.com/klen/python-mode
-echo "For future reference: https://github.com/klen/python-mode"
-git clone git://github.com/klen/rope-vim.git bundle/ropevim >/dev/null 2>&1
-echo "Installing pydoc..."
-git clone git://github.com/fs111/pydoc.vim.git bundle/pydoc >/dev/null 2>&1
-echo "Installing pytest.vim..."
-git clone git://github.com/alfredodeza/pytest.vim.git bundle/pytest >/dev/null 2>&1
-echo "Installing pep8..."
-git clone git://github.com/jcrocholl/pep8.git bundle/pep8 >/dev/null 2>&1
-echo "Installing jinja2 support..."
-git clone git://github.com/vim-scripts/Jinja.git bundle/jinja >/dev/null 2>&1
 echo "Installing closetag..."
 git clone git://github.com/vim-scripts/closetag.vim.git bundle/closetag >/dev/null 2>&1
 echo "Installing delimitMate (for autoclosing brackets etc)..."
 git clone git://github.com/Raimondi/delimitMate.git bundle/delimitMate >/dev/null 2>&1
+
+# Python plugins
+echo "Installing python-mode (pylint+pydoc+rope+pyflakes)..."
+git clone git://github.com/klen/python-mode.git bundle/python-mode >/dev/null 2>&1
+echo "Installing pytest.vim..."
+git clone git://github.com/alfredodeza/pytest.vim.git bundle/pytest >/dev/null 2>&1
+echo "Installing makegreen..."
+git clone git://github.com/reinh/vim-makegreen.git bundle/makegreen >/dev/null 2>&1
+echo "Installing pep8..."
+git clone git://github.com/jcrocholl/pep8.git bundle/pep8 >/dev/null 2>&1
+echo "Installing jinja2 support..."
+git clone git://github.com/vim-scripts/Jinja.git bundle/jinja >/dev/null 2>&1
 
 # install less important addons
 echo "Installing LaTeX support..."
 git clone git://github.com/gerw/vim-latex-suite.git bundle/latex >/dev/null 2>&1
 echo "Installing ack..."
 git clone git://github.com/vim-scripts/ack.vim.git bundle/ack >/dev/null 2>&1
-echo "Installing makegreen..."
-git clone git://github.com/reinh/vim-makegreen.git bundle/makegreen >/dev/null 2>&1
 echo "Installing nginx syntax..."
 git clone git://github.com/vim-scripts/nginx.vim.git bundle/nginx >/dev/null 2>&1
