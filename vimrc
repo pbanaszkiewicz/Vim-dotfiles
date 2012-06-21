@@ -50,7 +50,6 @@ set formatoptions=qrn1
 "set list
 "set listchars=tab:▸\ 
 
-set colorcolumn=80            " you see that fancy column on the right?
 set wildmenu                  " turn on command line completion wild style
 set wildignore=*.dll,*.o,*.obj,*.bak,*.pyc
 set wildmode=list:longest     " turn on wild mode huge list
@@ -151,15 +150,19 @@ ia funtion function
 ia fucntion function
 ia retunr return
 ia reutrn return
+ia dfe def
 
 
 " ### DESIGN, APPEARANCE, SCHEMES
 syntax on
+set colorcolumn=81            " you see that fancy column on the right?
 " change to your favorite
-set guifont=Consolas\ 10
+set noantialias               " font antialiasing turned off
+"set guifont=ProggyCleanTT\ 12
 "set guifont=Inconsolata\ 10
 "set guifont=Dina\ 10
 "set guifont=MonteCarlo\ 10
+set guifont=Monaco\ 9
 set number
 set background=dark
 "colorscheme wombat
@@ -203,7 +206,7 @@ nnoremap k gk
 inoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 nnoremap <F1> <ESC>
-" quickly reselect pasted text: \v
+" quickly reselect pasted text: \v (SOOO USEFUL!)
 nnoremap <leader>v V`]
 " CTRL+{h,j,k,l} for switching between windows
 nnoremap <C-h> <C-w>h
@@ -219,7 +222,7 @@ nnoremap ; :
 "     ### NERDTREE
 "     <F3> to activate
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
-let NERDTreeWinSize=37
+let NERDTreeWinSize=30
 
 
 "     ### TAGLIST
@@ -253,23 +256,51 @@ map <leader>g :GundoToggle<CR>
 "     ### PYTHON-MODE
 "     \r to run current file in Python
 "     \b to (un)set the breakpoint
+let g:pymode_motion=1
+let g:pymode_virtualenv=1
+let g:pymode_breakpoint=1
+" Autoremove unused whitespaces
+let g:pymode_utils_whitespaces=1
+" Set default pymode python indent options
+let g:pymode_options_indent=1
+" noone knows what this does
+let g:pymode_options_other=1
+" Enable pymode's custom syntax highlighting
+let g:pymode_syntax=1
+let g:pymode_syntax_all=1
 
 
-"     ### PYTHON-MODE pylint / pyflakes
+"     ### PYTHON-MODE code checking
 "     perform check when the file is being written
 let g:pymode_lint_config="$HOME/.vim/bundle/python-mode/pylint.ini"
 " pyflakes is not as strict as pylint is
-let g:pymode_lint_checker="pyflakes"
+"let g:pymode_lint_checker="pyflakes,pep8,mccabe"
+let g:pymode_lint_checker="pyflakes,pep8,mccabe"
+" show error msg when the cursor is at the error line
+let g:pymode_lint_message=1
+" hold cursor inside the window if quickfix window is opened
+let g:pymode_lint_hold=1
+" set allowed complexity for mccabe (8 is yet good, starting at 10 is not good)
+let g:pymode_lint_mccabe_complexity=7
 
 
 "     ### PYTHON-MODE rope
 "     \j   jump to definition
+"     <C-c>g   jump to definition
 "     \n   rename (simple refactoring)
 "     <C-o>      intellisense / completion
 "     <C-Space>  intellisense / completion
-noremap <leader>j :RopeGotoDefinition<CR>
-noremap <leader>n :RopeRename<CR>
-inoremap <C-o> <C-R>=RopeCodeAssistInsertMode()<CR>
+let g:pymode_rope_auto_project=1
+let g:pymode_rope_enable_autoimport=1
+let g:pymode_rope_guess_project=1
+let g:pymode_rope_goto_def_newwin="new"
+let g:pymode_rope_vim_completion=1
+let g:pymode_rope_sorted_completions=1
+let g:pymode_rope_extended_complete=0
+let g:pymode_rope_always_show_complete_menu=0
+"noremap <leader>j :RopeGotoDefinition<CR>
+"noremap <leader>n :RopeRename<CR>
+"inoremap <C-o> <C-R>=RopeCodeAssistInsertMode()<CR>
 
 
 "     ### PYTHON-MODE pydoc
@@ -284,9 +315,9 @@ inoremap <C-o> <C-R>=RopeCodeAssistInsertMode()<CR>
 "     and you'll see all the possible actions
 
 
-"     ### PEP8
+"     ### PEP8 -- doesn't work :( but we have python-mode instead!
 "     \8 to test your current file against PEP8
-let g:pep8_map='<leader>8'
+"let g:pep8_map='<leader>8'
 
 
 "     ### MAKEGREEN
@@ -312,6 +343,7 @@ nmap <leader>a <Esc>:Ack!<CR>
 
 
 "     ### COMMAND-T
+"     You should install it correctly, it needs some compilation AFAIR
 "     \t to activate
 
 
@@ -324,6 +356,14 @@ au BufNewFile,BufRead *.html let g:closetag_html_style=1
 "au FileType python let b:delimitMate_nesting_quotes=['"']
 au FileType text,asciidoc let b:delimitMate_autoclose=0
 
+
 "     ### NERD COMMENTER
 "     simply \c<SPACE> to toggle comments
 "     or \cl (left) to align comment signs to the left
+
+
+"     ### SOLARIZED color scheme
+let g:solarized_italic=0
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+let g:solarized_hitrail=1
