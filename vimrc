@@ -162,7 +162,8 @@ set noantialias               " font antialiasing turned off
 "set guifont=Inconsolata\ 10
 "set guifont=Dina\ 10
 "set guifont=MonteCarlo\ 10
-set guifont=Monaco\ 9
+"set guifont=Monaco\ 9
+set guifont=Ubuntu\ Mono\ 10
 set number
 set background=dark
 "colorscheme wombat
@@ -281,7 +282,13 @@ let g:pymode_lint_message=1
 " hold cursor inside the window if quickfix window is opened
 let g:pymode_lint_hold=1
 " set allowed complexity for mccabe (8 is yet good, starting at 10 is not good)
-let g:pymode_lint_mccabe_complexity=7
+let g:pymode_lint_mccabe_complexity=9
+" testing: check on the fly
+" probably error messages are shown upon saving
+let g:pymode_lint_onfly=1
+let g:pymode_lint_write=1
+" Minimal height of pylint error window
+let g:pymode_lint_minheight = 1
 
 
 "     ### PYTHON-MODE rope
@@ -367,3 +374,9 @@ let g:solarized_italic=0
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 let g:solarized_hitrail=1
+
+"     ### HTML files syntax highlighting
+"au BufNewFile,BufRead *.html setlocal filetype=jinja
+au BufNewFile,BufRead *.html setlocal filetype=htmldjango
+"au BufNewFile,BufRead *.html setlocal filetype=php
+"au BufNewFile,BufRead *.html setlocal filetype=html
