@@ -163,7 +163,7 @@ set noantialias               " font antialiasing turned off
 "set guifont=Dina\ 10
 "set guifont=MonteCarlo\ 10
 "set guifont=Monaco\ 9
-set guifont=Ubuntu\ Mono\ 10
+set guifont=Ubuntu\ Mono\ 11
 set number
 set background=dark
 "colorscheme wombat
@@ -380,3 +380,7 @@ let g:solarized_hitrail=1
 au BufNewFile,BufRead *.html setlocal filetype=htmldjango
 "au BufNewFile,BufRead *.html setlocal filetype=php
 "au BufNewFile,BufRead *.html setlocal filetype=html
+
+
+"     ### POWERLINE
+source /home/piotr/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
